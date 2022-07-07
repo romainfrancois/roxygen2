@@ -5,7 +5,8 @@
 * Code evaluated in inline markdown code chunks and `@eval`/`@evalRd`/
   `@evalNamespace` is now evaluated in an environment designed to be more
   reproducible and to suppress output that won't work in Rd (e.g. turning
-  off colour and unicode support in cli) (#1351).
+  off colour and unicode support in cli) (#1351). They now also set 
+  knitr options `comment = #>` (#1380) and `collapse = TRUE` (#1376).
 
 # roxygen2 7.2.0
 
@@ -49,7 +50,7 @@
   `\ifelse{}{}{}` tags are now inserted correctly (without additional `{}`) 
   (#1062).
 
-* `@inhert` now supports inheriting "Notes" with `@inherit pkg::fun note` 
+* `@inherit` now supports inheriting "Notes" with `@inherit pkg::fun note` 
   (@pat-s, #1218)
 
 * Automatic `@usage` now correctly wraps arguments containing syntactically 
